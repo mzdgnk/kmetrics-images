@@ -52,7 +52,7 @@
 
 
 # Base container（任意のrocker/*に変更可能ですがtidyverseまはたverseを推奨）
-FROM rocker/tidyverse:latest
+FROM rocker/tidyverse:3.6.0
 
 # 1)Change environment to Japanese (Character and DateTime)
 ENV LANG ja_JP.UTF-8
@@ -120,5 +120,3 @@ RUN install2.r --error --skipinstalled --repos https://cloud.r-project.org \
 RUN Rscript -e "BiocManager::install(c('genefilter'))" \
   && install2.r --error --skipinstalled --repos https://cloud.r-project.org \
     modeest
-
-CMD ["/init"]
