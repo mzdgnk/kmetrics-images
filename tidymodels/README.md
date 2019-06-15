@@ -1,6 +1,6 @@
 # tidymodels
-本ファイルは`rocker/tidymodels`(https://hub.docker.com/r/rocker/tidyverse/)をベースに日本語環境で『Rによる機械学習』のサンプルコードを動かせるようにしたコンテナイメージ（debian based）。  
-`rocker/tidymodels`に以下を追加。
+本ファイルは[rocker/tidyverse](https://hub.docker.com/r/rocker/tidyverse/)をベースに日本語環境で『Rによる機械学習』のサンプルコードを動かせるようにしたコンテナイメージ（debian based）。  
+`rocker/tidyverse`に以下を追加。
 1. 日本語ロケールの追加設定
 1. 日本語フォント（IPA Fonts）の追加
 1. Rパッケージをインストールするために必要なOSライブラリの追加

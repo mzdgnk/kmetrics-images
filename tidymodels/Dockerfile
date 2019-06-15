@@ -19,7 +19,7 @@
 #         その他、あると便利なパッケージを追加
 # 
 # *** Usage example **********************************************************
-#    $ sudo docker build -f Dockerfile.mlwr -t mlwr/tidymodels .
+#    $ docker build -f Dockerfile -t mzdgnk/tidymodels .
 # 
 #   ビルドするコンテナイメージ名はベースとした"rocker/*"と同様に名付けると
 #   分かりやすくなりますがDocker Hubに同名のアカウントがあると問題になる？
