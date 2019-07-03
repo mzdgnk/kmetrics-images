@@ -25,5 +25,3 @@ RUN Rscript -e "BiocManager::install(c('genefilter'))" \
 RUN Rscript -e "devtools::install_github('k-metrics/ggbiplot', \
                                          build_opts = c('--no-resave-data', \
                                          '--no-manual'))"
-
-CMD ["/init"]

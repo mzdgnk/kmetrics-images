@@ -32,5 +32,3 @@ RUN apt-get update -qq && \
       default-jdk \
       default-jre && \
   	R CMD javareconf
-
-CMD ["/init"]
