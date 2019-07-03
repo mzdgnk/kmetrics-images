@@ -1,5 +1,5 @@
 # Base container
-FROM rocker/verse:latest
+FROM rocker/verse:3.6.0
 
 # Change environment to Japanese (Character and DateTime)
 ENV LANG ja_JP.UTF-8

@@ -1,4 +1,4 @@
-FROM mzdgnk/jverse:latest
+FROM mzdgnk/jverse:3.5
 
 # Install R packages for Machine Learning with R (alphanureric order) and others
 # for Machine Learning with R
