@@ -1,5 +1,5 @@
 IMAGE := mzdgnk/tidymodels
-TAG := 3.6.1
+TAG := 3.6.0
 
 build:
 	docker build -t ${IMAGE}:${TAG} .
