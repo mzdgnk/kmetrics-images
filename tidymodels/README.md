@@ -3,7 +3,7 @@
 
 [データ分析勉強会](https://sites.google.com/site/kantometrics/2019)で使う目的で作ったイメージです。
 
-3.6.0-sample, latest-sampleタグのイメージには、[『Rによる機械学習』](https://www.shoeisha.co.jp/book/detail/9784798145112)のサンプルコード(`~/samples`)が入っています。
+3.6.0-sample, latest-sampleタグのイメージには、[『Rによる機械学習』](https://www.shoeisha.co.jp/book/detail/9784798145112)のサンプルコード(`~/samples`)が入っています。USERに`rstudio`以外を指定してしまうと、samplesは使えません。
 
 ベースイメージの[mlwr](https://hub.docker.com/r/mzdgnk/mlwr)は常に最新のイメージがプッシュされますが、tidymodelsは最新のイメージがプッシュされていない可能性があります。
 理由は、dockerhub上でビルドできない(メモリ使用量の関係)ため、ローカルで手動ビルド/プッシュしているからです。
