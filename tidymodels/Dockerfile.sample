@@ -1,0 +1,5 @@
+FROM mzdgnk/tidymodels:3.6.0
+
+RUN git clone --depth 1 https://github.com/dataspelunking/MLwR.git /home/rstudio/samples
+RUN find /home/rstudio/samples -type d -exec chmod 777 \{\} \;
+RUN find /home/rstudio/samples -type f -exec chmod a+w \{\} \;
