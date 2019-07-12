@@ -23,7 +23,7 @@ docker run --name some-rstudio --rm -e PASSWORD=password \
 ホストディレクトリをマウントして、コンテナを消してもデータが残るようにします。
 ```
 mkdir rstudio
-docker run --name some-rstudio --rm -e PASSWORD=password \
+docker run --name some-rstudio --rm -e PASSWORD=passwd \
 -v $(pwd)/rstudio:/home/rstudio -p 8787:8787 mzdgnk/tidymodels
 ```
 
@@ -31,7 +31,7 @@ docker run --name some-rstudio --rm -e PASSWORD=password \
 マウント先のディレクトリがユーザのホームディレクトリになる。
 ```
 mkdir rstudio
-docker run --name some-rstudio --rm -e USER=tidymodels -e PASSWORD=password \
+docker run --name some-rstudio --rm -e USER=tidymodels -e PASSWORD=passwd \
 -v $(pwd)/rstudio:/home/tidymodels -p 8787:8787 mzdgnk/tidymodels
 ```
 
