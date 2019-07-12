@@ -1,6 +1,5 @@
 IMAGE := mzdgnk/tidymodels
-TAG := 3.6.0
-SAMPLE_TAG := ${TAG}-sample
+TAG := 3.6.1
 
 build:
 	docker pull mzdgnk/mlwr:3.6.0
@@ -11,7 +10,3 @@ push: build
 	docker push ${IMAGE}:${TAG}
 	docker tag ${IMAGE}:${TAG} ${IMAGE}:latest
 	docker push ${IMAGE}:latest
-
-	docker push ${IMAGE}:${SAMPLE_TAG}
-	docker tag ${IMAGE}:${SAMPLE_TAG} ${IMAGE}:latest-sample
-	docker push ${IMAGE}:latest-sample
