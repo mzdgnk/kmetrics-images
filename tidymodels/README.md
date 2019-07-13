@@ -17,7 +17,9 @@
 docker run --name some-rstudio --rm -e PASSWORD=password \
   -p 8787:8787 mzdgnk/tidymodels:latest
 ```
-http://localhost:8787 でrstudioサーバにアクセスします。
+http://localhost:8787 でrstudioサーバにアクセスします。  
+ID: rstudio  
+PW: password (-e PASSWORDで設定したもの)
 
 ※ソースコードを編集してもコンテナを消すと編集結果も消えます。
 
@@ -29,11 +31,33 @@ docker run --name some-rstudio --rm -e PASSWORD=passwd \
 -v $(pwd)/rstudio:/home/rstudio -p 8787:8787 mzdgnk/tidymodels
 ```
 
+### docker compose
+docker-compose.yaml を作って、
+```
+version: '3'
+services:
+    rstudio:
+        image: mzdgnk/tidymodels:latest-sample
+        container_name: some-rstudio
+        restart: always
+        environment:
+            - PASSWORD=password
+        ports:
+            - "8787:8787"
+        volumes:
+            - ./rstudio:/home/rstudio
+```
+
+立ち上げる。
+```
+docker-compose up -d
+```
+
 ## ユーザを指定したい場合
 マウント先のディレクトリがユーザのホームディレクトリになる。
 ```
 mkdir rstudio
-docker run --name some-rstudio --rm -e USER=tidymodels -e PASSWORD=passwd \
+docker run --name some-rstudio --rm -e USER=tidymodels -e PASSWORD=password \
 -v $(pwd)/rstudio:/home/tidymodels -p 8787:8787 mzdgnk/tidymodels
 ```
 

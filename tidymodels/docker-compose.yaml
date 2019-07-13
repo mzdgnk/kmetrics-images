@@ -1,0 +1,12 @@
+version: '3'
+services:
+    rstudio:
+        image: mzdgnk/tidymodels:latest-sample
+        container_name: some-rstudio
+        restart: always
+        environment:
+            - PASSWORD=password
+        ports:
+            - "8787:8787"
+        volumes:
+            - ./rstudio:/home/rstudio
