@@ -17,7 +17,9 @@
 docker run --name some-rstudio --rm -e PASSWORD=password \
   -p 8787:8787 mzdgnk/tidymodels:latest
 ```
-ソースコードを編集してもコンテナを消すと編集結果も消えます。
+http://localhost:8787 でrstudioサーバにアクセスします。
+
+※ソースコードを編集してもコンテナを消すと編集結果も消えます。
 
 ## 編集したソースコードを残す。
 ホストディレクトリをマウントして、コンテナを消してもデータが残るようにします。
