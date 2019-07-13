@@ -1,4 +1,4 @@
-FROM mzdgnk/tidymodels:3.6.0
+mzdgnk/tidymodelsFROM mzdgnk/tidymodels:3.6.0
 
 COPY docker-entrypoint.sh /
 RUN chmod a+x docker-entrypoint.sh
