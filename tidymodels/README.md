@@ -15,11 +15,11 @@
 とりあえず使ってみる。[『Rによる機械学習』](https://www.shoeisha.co.jp/book/detail/9784798145112)のサンプルコード(`~/mlwr-samples`)が入っています。
 ```
 docker run --name some-rstudio --rm -e PASSWORD=password \
-  -p 8787:8787 mzdgnk/tidymodels:latest
+  -p 8787:8787 mzdgnk/tidymodels:latest-sample
 ```
 http://localhost:8787 でrstudioサーバにアクセスします。  
 ID: rstudio  
-PW: password (-e PASSWORDで設定したもの)
+PW: rstudio (-e PASSWORDで設定したもの)
 
 ※ソースコードを編集してもコンテナを消すと編集結果も消えます。
 
