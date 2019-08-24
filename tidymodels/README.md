@@ -26,8 +26,7 @@ PW: password (-e PASSWORDで設定したもの)
 ## 編集したソースコードを残す。
 ホストディレクトリをマウントして、コンテナを消してもデータが残るようにします。
 ```
-mkdir rstudio
-docker run --name some-rstudio --rm -e PASSWORD=passwd \
+docker run --name some-rstudio --rm -e PASSWORD=password \
 -v $(pwd)/rstudio:/home/rstudio -p 8787:8787 mzdgnk/tidymodels
 ```
 
@@ -53,10 +52,14 @@ services:
 docker-compose up -d
 ```
 
+落とすとき
+```
+docker-compose down
+```
+
 ## ユーザを指定したい場合
 マウント先のディレクトリがユーザのホームディレクトリになる。
 ```
-mkdir rstudio
 docker run --name some-rstudio --rm -e USER=tidymodels -e PASSWORD=password \
 -v $(pwd)/rstudio:/home/tidymodels -p 8787:8787 mzdgnk/tidymodels
 ```
